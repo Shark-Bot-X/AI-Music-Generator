@@ -1,0 +1,2814 @@
+
+2025-07-08 17:20:55,975 - INFO - stdout:
+Enter text prompt for music: No prompt entered. Exiting.
+
+2025-07-08 17:20:55,975 - ERROR - Music generation failed.
+2025-07-08 17:21:16,868 - INFO - Using existing voice.wav from output/
+2025-07-08 17:21:16,868 - INFO - Generating music from lyrics using AudioCraft...
+2025-07-08 17:21:16,868 - INFO - Running script: sound\main.py
+2025-07-08 17:21:51,386 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-08 17:21:59,261 - INFO - Setting generation parameters: duration=21
+2025-07-08 17:22:09,326 - INFO - Generating music for prompt: An uplifting cinematic orchestral theme with gentle piano, emotional strings, and a touch of ambient electronic elements, perfect for a sunrise journey
+2025-07-08 17:22:09,611 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-08 17:24:13,958 - INFO - Music generated and saved at: output/music.wav
+2025-07-08 17:24:15,034 - INFO - Script sound\main.py executed successfully.
+2025-07-08 17:24:15,034 - INFO - Music generation successful.
+2025-07-08 17:24:15,035 - INFO - Mixing voice and background music...
+2025-07-08 17:24:22,160 - INFO - Final song mixed and saved at output/final_song.wav
+2025-07-08 17:24:22,273 - INFO - MP3 version saved: output/final_song.mp3
+2025-07-08 17:24:22,274 - INFO - Launching tune_music.py for mixing...
+2025-07-08 17:24:31,091 - INFO - Tuning completed successfully.
+2025-07-08 17:29:39,026 - INFO - Running script: sound\audiocraft_env\Scripts\python sound\main.py
+2025-07-08 17:29:45,895 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-08 17:29:53,079 - INFO - Setting generation parameters: duration=21
+2025-07-08 17:33:23,296 - INFO - Running script: sound\audiocraft_env\Scripts\python sound\main.py
+2025-07-08 17:33:29,983 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-08 17:33:37,092 - INFO - Setting generation parameters: duration=21
+2025-07-08 17:33:37,092 - INFO - Generating music for prompt: An uplifting cinematic orchestral theme with gentle piano, emotional strings, and a touch of ambient electronic elements, perfect for a sunrise journey
+2025-07-08 17:33:37,387 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-08 17:35:40,633 - INFO - Music generated and saved at: output/music.wav
+2025-07-08 17:53:25,422 - INFO - Running script: Tortoise\musicenv\Scripts\python Tortoise\lyrics.py
+2025-07-08 17:53:33,622 - INFO - Configuring Gemini...
+2025-07-08 17:53:33,622 - INFO - Gemini model loaded.
+2025-07-08 17:53:48,726 - INFO - Starting generation pipeline.
+2025-07-08 17:53:48,727 - INFO - User Prompt: Energetic rock song with distorted guitars, heavy drums, and powerful male vocals. The song expresses breaking free from fear, personal struggle, and rising stronger. ramatic build-up, and a strong, shoutable chorus
+2025-07-08 17:53:48,727 - INFO - Generating lyrics from prompt...
+2025-07-08 17:58:21,996 - ERROR - Tortoise\lyrics.py failed with code 1
+2025-07-08 17:58:21,996 - ERROR - C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\transformers\utils\generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\transformers\utils\generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\rotary_embedding_torch\rotary_embedding_torch.py:29: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\rotary_embedding_torch\rotary_embedding_torch.py:189: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\transformers\utils\generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+Some weights of the model checkpoint at jbetker/wav2vec2-large-robust-ft-libritts-voxpopuli were not used when initializing Wav2Vec2ForCTC: ['wav2vec2.encoder.pos_conv_embed.conv.weight_g', 'wav2vec2.encoder.pos_conv_embed.conv.weight_v']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of Wav2Vec2ForCTC were not initialized from the model checkpoint at jbetker/wav2vec2-large-robust-ft-libritts-voxpopuli and are newly initialized: ['wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original0', 'wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original1']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\torch\nn\utils\weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Traceback (most recent call last):
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\lyrics.py", line 143, in <module>
+    main()
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\lyrics.py", line 132, in main
+    lyrics = generate_lyrics(user_input)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\lyrics.py", line 61, in generate_lyrics
+    response = gemini_model.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 42
+}
+]
+
+2025-07-08 18:04:51,152 - INFO - Running script: Tortoise\musicenv\Scripts\python Tortoise\lyrics.py
+2025-07-08 18:04:59,461 - INFO - Configuring Gemini...
+2025-07-08 18:04:59,462 - INFO - Gemini model loaded.
+2025-07-08 18:05:17,489 - INFO - Starting generation pipeline.
+2025-07-08 18:05:17,493 - INFO - User Prompt: Energetic rock song with distorted guitars, heavy drums, and powerful male vocals. The song expresses breaking free from fear, personal struggle, and rising stronger. ramatic build-up, and a strong, shoutable chorus
+2025-07-08 18:05:17,493 - INFO - Generating lyrics from prompt...
+2025-07-08 18:08:46,239 - INFO - Lyrics generated successfully.
+2025-07-08 18:08:46,239 - INFO - Generated Lyrics:
+Chains are breaking, spirit soaring high,
+Fear's a shadow, left behind to die.
+This beating heart, a thunderous drum,
+I rise above, my victory's come!
+No more hiding, no more silent cries,
+Strength unleashed, beneath defiant skies.
+2025-07-08 18:08:46,239 - INFO - Detecting genre from prompt...
+2025-07-08 18:09:57,278 - INFO - Detected genre: rock
+2025-07-08 18:09:57,278 - INFO - Selected Voice: snakes
+2025-07-08 18:09:57,278 - INFO - Generating voice using 'snakes'...
+2025-07-08 18:09:57,279 - INFO - Loading voice model...
+2025-07-08 18:09:57,398 - INFO - Synthesizing chunk 1/1...
+2025-07-08 19:46:33,605 - INFO - Voice saved to output/voice.wav
+2025-07-08 19:46:33,609 - INFO - All steps complete.
+2025-07-08 19:46:37,630 - WARNING - music.wav missing but reuse requested.
+2025-07-08 19:47:49,710 - INFO - Running script: sound\audiocraft_env\Scripts\python sound\main.py
+2025-07-08 19:48:16,948 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-08 19:48:24,302 - INFO - Setting generation parameters: duration=21
+2025-07-08 19:48:24,302 - INFO - Generating music for prompt: Energetic rock song with distorted guitars, heavy drums, and powerful male vocals. The song expresses breaking free from fear, personal struggle, and rising stronger. ramatic build-up, and a strong, shoutable chorus
+2025-07-08 19:48:24,594 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-08 19:50:36,086 - INFO - Music generated and saved at: output/music.wav
+2025-07-08 19:50:40,605 - INFO - Voice + Music mix successful.
+2025-07-08 19:50:40,605 - INFO - Launching tune_music.py...
+2025-07-08 19:50:52,111 - INFO - Tuning completed.
+2025-07-09 08:21:42,052 - INFO - Running script: Tortoise\musicenv\Scripts\python Tortoise\lyrics.py
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-803-107
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 994-792-289
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 994-792-289
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 08:44:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 08:44:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 994-792-289
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 994-792-289
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 08:54:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\SNEH\\Desktop\\AI MUSIC\\run.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 994-792-289
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 08:57:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\SNEH\\Desktop\\AI MUSIC\\run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 994-792-289
+INFO:werkzeug: * Detected change in 'C:\\Users\\SNEH\\Desktop\\AI MUSIC\\run.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 994-792-289
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 09:09:51] "GET / HTTP/1.1" 200 -
+INFO:root:Starting generation for: hi
+INFO:root:Genre: pop, Mood: happy
+INFO:root:Starting voice generation...
+INFO:root:Running: Tortoise\musicenv\Scripts\python Tortoise\lyrics.py
+2025-07-09 09:10:38,952 - INFO - Configuring Gemini...
+2025-07-09 09:10:38,952 - INFO - Gemini model loaded.
+2025-07-09 09:11:04,263 - INFO - Starting generation pipeline.
+2025-07-09 09:11:04,271 - INFO - User Prompt: [Verse 1]
+
+The sun goes down, the stars appear
+
+Your voice is all I want to hear
+
+In this moment, time stands still
+
+With you I find my perfect thrill
+
+
+
+[Verse 2]
+
+Walking through the city lights
+
+Hand in hand on summer nights
+
+Every touch feels like a spark
+
+Lighting up the endless dark
+
+
+
+[Chorus]
+
+Oh-oh-oh, you're my melody
+
+Oh-oh-oh, sweet harmony
+
+In your arms I've found my home
+
+Never want to be alone
+
+
+
+[Bridge]
+
+aa happy mood song
+
+This is where our story grows
+
+Like a river, freely flows
+
+
+
+[Outro]
+
+Fading slowly, end of day
+
+But our love won't fade away
+2025-07-09 09:11:04,271 - INFO - Generating lyrics from prompt...
+2025-07-09 09:11:06,288 - INFO - Lyrics generated successfully.
+2025-07-09 09:11:06,288 - INFO - Generated Lyrics:
+City lights paint the evening sky,
+Your hand in mine, a sweet goodbye.
+Stars ignite a tender fire,
+Burning bright, a pure desire.
+In your arms, my heart takes flight,
+Forever bathed in love's soft light.
+2025-07-09 09:11:06,288 - INFO - Detecting genre from prompt...
+2025-07-09 09:11:07,880 - INFO - Detected genre: pop
+2025-07-09 09:11:07,880 - INFO - Selected Voice: emma
+2025-07-09 09:11:07,880 - INFO - Generating voice using 'emma'...
+2025-07-09 09:11:07,882 - INFO - Loading voice model...
+2025-07-09 09:11:07,988 - INFO - Synthesizing chunk 1/1...
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 994-792-289
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 09:15:02] "GET / HTTP/1.1" 200 -
+INFO:root:Starting generation for: ,m
+INFO:root:Genre: pop, Mood: happy
+INFO:root:Starting voice generation...
+INFO:root:Running: Tortoise\musicenv\Scripts\python Tortoise\lyrics.py
+2025-07-09 09:15:22,552 - INFO - Configuring Gemini...
+2025-07-09 09:15:22,552 - INFO - Gemini model loaded.
+2025-07-09 09:15:44,091 - INFO - Starting generation pipeline.
+2025-07-09 09:15:44,091 - INFO - User Prompt: hig
+2025-07-09 09:15:44,091 - INFO - Generating lyrics from prompt...
+2025-07-09 09:15:47,120 - INFO - Lyrics generated successfully.
+2025-07-09 09:15:47,120 - INFO - Generated Lyrics:
+Heart beats high, a soaring flight,
+Sunlight streams, a dazzling light.
+Whispers rise, on wind so free,
+Echoing joy, eternally.
+A breathless dance, a wild embrace,
+Pure elation, time and space.
+2025-07-09 09:15:47,120 - INFO - Detecting genre from prompt...
+2025-07-09 09:15:49,877 - INFO - Detected genre: hip-hop
+2025-07-09 09:15:49,877 - INFO - Selected Voice: denerio
+2025-07-09 09:15:49,877 - INFO - Generating voice using 'denerio'...
+2025-07-09 09:15:49,877 - INFO - Loading voice model...
+INFO:root:STDOUT:
+Ignored unknown kwarg option normalize
+Ignored unknown kwarg option normalize
+Ignored unknown kwarg option normalize
+Ignored unknown kwarg option normalize
+
+ERROR:root:STDERR:
+C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\transformers\utils\generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\transformers\utils\generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\rotary_embedding_torch\rotary_embedding_torch.py:29: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\rotary_embedding_torch\rotary_embedding_torch.py:189: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @autocast(enabled = False)
+C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\transformers\utils\generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+Some weights of the model checkpoint at jbetker/wav2vec2-large-robust-ft-libritts-voxpopuli were not used when initializing Wav2Vec2ForCTC: ['wav2vec2.encoder.pos_conv_embed.conv.weight_g', 'wav2vec2.encoder.pos_conv_embed.conv.weight_v']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of Wav2Vec2ForCTC were not initialized from the model checkpoint at jbetker/wav2vec2-large-robust-ft-libritts-voxpopuli and are newly initialized: ['wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original0', 'wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original1']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\musicenv\Lib\site-packages\torch\nn\utils\weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Traceback (most recent call last):
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\lyrics.py", line 143, in <module>
+    main()
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\lyrics.py", line 138, in main
+    generate_voice(lyrics, OUTPUT_VOICE, selected_voice)
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\lyrics.py", line 104, in generate_voice
+    voice_samples, conditioning_latents = load_voice(voice_name)
+                                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SNEH\Desktop\AI MUSIC\Tortoise\tortoise-tts\tortoise\utils\audio.py", line 109, in load_voice
+    paths = voices[voice]
+            ~~~~~~^^^^^^^
+KeyError: 'denerio'
+
+ERROR:root:Script failed with code 1
+ERROR:root:Voice generation failed
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 09:15:53] "[35m[1mPOST /generate HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-803-107
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 10:04:28] "GET / HTTP/1.1" 200 -
+INFO:root:Starting generation for: 
+INFO:root:Genre: pop, Mood: energetic
+INFO:root:Using existing audio: True
+INFO:root:Using uploaded audio file: output\best_voice.wav
+INFO:root:Starting music generation...
+INFO:root:Running: sound\audiocraft_env\Scripts\python sound\main.py
+2025-07-09 10:05:37,481 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 10:05:46,452 - INFO - Setting generation parameters: duration=21
+2025-07-09 10:05:46,452 - WARNING - No text prompt provided via stdin. Exiting.
+INFO:root:STDOUT:
+No prompt entered. Exiting.
+
+ERROR:root:STDERR:
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.0+cu121 with CUDA 1201 (you have 2.1.0+cpu)
+    Python  3.9.13 (you have 3.9.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\torch\nn\utils\weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+
+ERROR:root:Script failed with code 1
+ERROR:root:Music generation failed
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 10:05:47] "[35m[1mPOST /generate HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 10:06:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNEH\\Desktop\\AI MUSIC\\run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-803-107
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNEH\\Desktop\\AI MUSIC\\run.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-803-107
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 994-792-289
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 10:11:08] "GET / HTTP/1.1" 200 -
+INFO:root:Starting generation for: rock-song
+INFO:root:Genre: pop, Mood: energetic
+INFO:root:Using existing audio: True
+INFO:root:Using uploaded audio file: output\best_voice.wav
+INFO:root:Starting music generation...
+INFO:root:Running: sound\audiocraft_env\Scripts\python sound\main.py
+2025-07-09 10:11:40,565 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 10:11:48,343 - INFO - Setting generation parameters: duration=21
+2025-07-09 10:11:48,343 - INFO - Generating music for prompt: rock-song in pop style with energetic mood
+2025-07-09 10:11:48,622 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-09 10:14:22,050 - INFO - Music generated and saved at: output/music.wav
+INFO:root:STDOUT:
+     1 /   1053
+     2 /   1053
+Music saved at: output/music.wav
+
+ERROR:root:STDERR:
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.0+cu121 with CUDA 1201 (you have 2.1.0+cpu)
+    Python  3.9.13 (you have 3.9.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\torch\nn\utils\weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+
+INFO:root:Music generation completed
+INFO:root:Mixing voice and music...
+ERROR:root:Error in /generate
+Traceback (most recent call last):
+  File "C:\Users\SNEH\Desktop\AI MUSIC\run.py", line 128, in generate
+    final.export(FINAL_MP3_PATH, format="mp3")
+  File "C:\Users\SNEH\AppData\Local\Programs\Python\Python39\lib\site-packages\pydub\audio_segment.py", line 867, in export
+    out_f, _ = _fd_or_path_or_tempfile(out_f, 'wb+')
+  File "C:\Users\SNEH\AppData\Local\Programs\Python\Python39\lib\site-packages\pydub\utils.py", line 60, in _fd_or_path_or_tempfile
+    fd = open(fd, mode=mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'static\\final_song.mp3'
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 10:14:24] "[35m[1mPOST /generate HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\SNEH\\Desktop\\AI MUSIC\\run.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 133-803-107
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 10:19:32] "GET / HTTP/1.1" 200 -
+INFO:root:Starting generation for: energetic song
+INFO:root:Genre: rock, Mood: energetic
+INFO:root:Using existing audio: True
+INFO:root:Using uploaded audio file: output\best_voice.wav
+INFO:root:Starting music generation...
+INFO:root:Running: sound\audiocraft_env\Scripts\python sound\main.py
+2025-07-09 10:20:08,687 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 10:20:19,403 - INFO - Setting generation parameters: duration=21
+2025-07-09 10:20:19,404 - INFO - Generating music for prompt: energetic song in rock style with energetic mood
+2025-07-09 10:20:19,483 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-09 10:22:39,219 - INFO - Music generated and saved at: output/music.wav
+INFO:root:STDOUT:
+Music saved at: output/music.wav
+
+ERROR:root:STDERR:
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.0+cu121 with CUDA 1201 (you have 2.1.0+cpu)
+    Python  3.9.13 (you have 3.9.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\torch\nn\utils\weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+
+INFO:root:Music generation completed
+INFO:root:Mixing voice and music...
+INFO:root:\u2705 Song mixed successfully
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 10:22:40] "POST /generate HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 10:23:03] "[33mGET /static/static\\final_song.mp3 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Jul/2025 10:23:26] "GET / HTTP/1.1" 200 -
+2025-07-09 11:21:42,894 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 11:21:53,261 - INFO - Setting generation parameters: duration=21
+2025-07-09 11:21:53,261 - INFO - Generating music for prompt: energetic song in pop style with energetic mood
+2025-07-09 11:21:53,603 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-09 11:23:18,684 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 11:23:28,239 - INFO - Setting generation parameters: duration=21
+2025-07-09 11:23:28,239 - INFO - Generating music for prompt: energetic song in pop style with energetic mood
+2025-07-09 11:23:28,337 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-09 11:25:52,602 - INFO - Music generated and saved at: output/music.wav
+2025-07-09 12:40:35,734 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 12:43:18,170 - INFO - Music generated and saved at: output/music.wav
+2025-07-09 12:46:34,289 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 12:46:43,610 - INFO - Setting generation parameters: duration=21
+2025-07-09 12:46:43,610 - INFO - Generating music for prompt: energetic song in pop style with energetic mood
+2025-07-09 12:46:43,727 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-09 12:49:02,473 - INFO - Music generated and saved at: output/music.wav
+2025-07-09 12:52:45,843 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 12:52:53,833 - INFO - Setting generation parameters: duration=21
+2025-07-09 12:52:53,833 - INFO - Generating music for prompt: energetic song in rock style with energetic mood
+2025-07-09 12:52:53,917 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-09 12:55:11,398 - INFO - Music generated and saved at: output/music.wav
+2025-07-09 13:00:00,812 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 13:00:07,407 - INFO - Setting generation parameters: duration=21
+2025-07-09 13:00:07,407 - INFO - Generating music for prompt: energetic song in pop style with energetic mood
+2025-07-09 13:00:07,466 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-09 13:01:50,165 - INFO - Music generated and saved at: output/music.wav
+2025-07-09 13:04:22,708 - WARNING -  * Debugger is active!
+2025-07-09 13:04:22,710 - INFO -  * Debugger PIN: 133-803-107
+2025-07-09 13:04:23,752 - INFO -  * Detected change in 'c:\\Users\\SNEH\\Desktop\\AI MUSIC\\run.py', reloading
+2025-07-09 13:04:25,449 - WARNING -  * Debugger is active!
+2025-07-09 13:04:25,451 - INFO -  * Debugger PIN: 133-803-107
+2025-07-09 13:04:27,514 - INFO -  * Detected change in 'c:\\Users\\SNEH\\Desktop\\AI MUSIC\\run.py', reloading
+2025-07-09 13:04:29,118 - WARNING -  * Debugger is active!
+2025-07-09 13:04:29,123 - INFO -  * Debugger PIN: 133-803-107
+2025-07-09 13:04:36,264 - INFO -  * Detected change in 'c:\\Users\\SNEH\\Desktop\\AI MUSIC\\run.py', reloading
+2025-07-09 13:04:47,098 - WARNING -  * Debugger is active!
+2025-07-09 13:04:47,100 - INFO -  * Debugger PIN: 133-803-107
+2025-07-09 13:04:53,853 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-09 13:04:53,854 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 13:04:53,855 - INFO -  * Restarting with stat
+2025-07-09 13:04:54,080 - WARNING -  * Debugger is active!
+2025-07-09 13:04:54,082 - INFO -  * Debugger PIN: 133-803-107
+2025-07-09 13:05:03,926 - INFO - 127.0.0.1 - - [09/Jul/2025 13:05:03] "GET / HTTP/1.1" 200 -
+2025-07-09 13:05:14,863 - INFO - \U0001f3a4 Starting generation: energetic song, Genre: pop, Mood: happy, Using audio: True
+2025-07-09 13:05:14,869 - INFO - \U0001f4e5 Uploaded audio saved to: output\voice.wav
+2025-07-09 13:05:14,870 - INFO - \U0001f3b6 Generating background music...
+2025-07-09 13:05:20,432 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 13:05:27,213 - INFO - Setting generation parameters: duration=21
+2025-07-09 13:05:27,213 - INFO - Generating music for prompt: energetic song in pop style with happy mood
+2025-07-09 13:05:27,263 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-09 13:07:11,280 - INFO - Music generated and saved at: output/music.wav
+2025-07-09 13:07:12,266 - INFO - STDOUT:
+     1 /   1053
+
+2025-07-09 13:07:12,271 - ERROR - STDERR:
+    PyTorch 2.1.0+cu121 with CUDA 1201 (you have 2.1.0+cpu)
+    Python  3.9.13 (you have 3.9.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\torch\nn\utils\weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+
+2025-07-09 13:28:47,706 - INFO - Mixing voice & music using tune_music.py
+2025-07-09 13:28:52,812 - INFO - tune_music.py Output:
+Music tuning failed: unsupported format string passed to numpy.ndarray.__format__
+
+2025-07-09 13:28:52,812 - INFO - Final MP3 available at: static\final_song.mp3
+2025-07-09 13:28:52,816 - INFO - 127.0.0.1 - - [09/Jul/2025 13:28:52] "POST /generate HTTP/1.1" 200 -
+2025-07-09 13:30:13,882 - INFO - 127.0.0.1 - - [09/Jul/2025 13:30:13] "[33mGET /static/static\\final_song.mp3 HTTP/1.1[0m" 404 -
+2025-07-09 14:36:03,994 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-09 14:36:03,994 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 14:36:03,999 - INFO -  * Restarting with stat
+2025-07-09 14:36:04,354 - WARNING -  * Debugger is active!
+2025-07-09 14:36:04,397 - INFO -  * Debugger PIN: 133-803-107
+2025-07-09 14:36:08,546 - INFO - 127.0.0.1 - - [09/Jul/2025 14:36:08] "GET / HTTP/1.1" 200 -
+2025-07-09 14:36:08,741 - INFO - 127.0.0.1 - - [09/Jul/2025 14:36:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-09 14:36:15,183 - INFO - 127.0.0.1 - - [09/Jul/2025 14:36:15] "GET / HTTP/1.1" 200 -
+2025-07-09 14:36:25,323 - INFO - Starting generation: energetic song, Genre: pop, Mood: energetic, Using audio: True
+2025-07-09 14:36:25,327 - INFO - Uploaded audio saved to: output\voice.wav
+2025-07-09 14:36:25,329 - INFO - Generating background music...
+2025-07-09 14:39:59,903 - INFO - Music generated and saved at: output/music.wav
+2025-07-09 14:40:01,324 - INFO - STDOUT:
+     1 /   1053
+     2 /   105
+  1052 /   1053
+  1053 /   1053
+Music saved at: output/music.wav
+
+2025-07-09 14:40:01,324 - ERROR - STDERR:
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.0+cu121 with CUDA 1201 (you have 2.1.0+cpu)
+    Python  3.9.13 (you have 3.9.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+  Set XFORMERS_MORE_DETAILS=1 for more details
+C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\torch\nn\utils\weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+
+2025-07-09 14:40:01,324 - INFO - Mixing voice & music using tune_music.py
+2025-07-09 14:40:14,911 - INFO - tune_music.py Output:
+Music tuning failed: unsupported format string passed to numpy.ndarray.__format__
+
+2025-07-09 14:40:14,911 - INFO - Final MP3 available at: static/final_song.mp3
+2025-07-09 14:40:14,922 - INFO - 127.0.0.1 - - [09/Jul/2025 14:40:14] "POST /generate HTTP/1.1" 200 -
+2025-07-09 14:41:40,887 - INFO - 127.0.0.1 - - [09/Jul/2025 14:41:40] "[33mGET /static/final_song.mp3 HTTP/1.1[0m" 404 -
+2025-07-09 14:49:47,710 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-09 14:49:47,710 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 14:49:47,712 - INFO -  * Restarting with stat
+2025-07-09 14:49:48,083 - WARNING -  * Debugger is active!
+2025-07-09 14:49:48,088 - INFO -  * Debugger PIN: 133-803-107
+2025-07-09 14:49:55,833 - INFO - 127.0.0.1 - - [09/Jul/2025 14:49:55] "GET / HTTP/1.1" 200 -
+2025-07-09 14:50:08,022 - INFO - Starting generation: energetic song, Genre: rock, Mood: energetic, Using audio: True
+2025-07-09 14:50:08,054 - INFO - Uploaded audio saved to: output\voice.wav
+2025-07-09 14:50:08,054 - INFO - Generating background music...
+2025-07-09 14:50:19,506 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 14:50:32,556 - INFO - Setting generation parameters: duration=21
+2025-07-09 14:50:32,556 - INFO - Generating music for prompt: energetic song in rock style with energetic mood
+2025-07-09 14:50:32,827 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-09 14:53:04,193 - INFO - Music generated and saved at: output/music.wav
+2025-07-09 14:53:05,645 - INFO - STDOUT:
+     1 /   1053
+     2 /   1053
+     3 /   1053
+     4 /   1053
+     5 /   1053
+     6 /   1053
+     7 /   1053
+     8 /   1053
+     9 /   1053
+    10 /   1053
+    11 /   1053
+    12 /   1053
+    13 /   1053
+    14 /   1053
+    15 /   1053
+    16 /   1053
+    17 /   1053
+    18 /   1053
+    19 /   1053
+    20 /   1053
+    21 /   1053
+    22 /   1053
+    23 /   1053
+    24 /   1053
+    25 /   1053
+    26 /   1053
+    27 /   1053
+    28 /   1053
+    29 /   1053
+    30 /   1053
+    31 /   1053
+    32 /   1053
+    33 /   1053
+    34 /   1053
+    35 /   1053
+    36 /   1053
+    37 /   1053
+    38 /   1053
+    39 /   1053
+    40 /   1053
+    41 /   1053
+    42 /   1053
+    43 /   1053
+    44 /   1053
+    45 /   1053
+    46 /   1053
+    47 /   1053
+    48 /   1053
+    49 /   1053
+    50 /   1053
+    51 /   1053
+    52 /   1053
+    53 /   1053
+    54 /   1053
+    55 /   1053
+    56 /   1053
+    57 /   1053
+    58 /   1053
+    59 /   1053
+    60 /   1053
+    61 /   1053
+    62 /   1053
+    63 /   1053
+    64 /   1053
+    65 /   1053
+    66 /   1053
+    67 /   1053
+    68 /   1053
+    69 /   1053
+    70 /   1053
+    71 /   1053
+    72 /   1053
+    73 /   1053
+    74 /   1053
+    75 /   1053
+    76 /   1053
+    77 /   1053
+    78 /   1053
+    79 /   1053
+    80 /   1053
+    81 /   1053
+    82 /   1053
+    83 /   1053
+    84 /   1053
+    85 /   1053
+    86 /   1053
+    87 /   1053
+    88 /   1053
+    89 /   1053
+    90 /   1053
+    91 /   1053
+    92 /   1053
+    93 /   1053
+    94 /   1053
+    95 /   1053
+    96 /   1053
+    97 /   1053
+    98 /   1053
+    99 /   1053
+   100 /   1053
+   101 /   1053
+   102 /   1053
+   103 /   1053
+   104 /   1053
+   105 /   1053
+   106 /   1053
+   107 /   1053
+   108 /   1053
+   109 /   1053
+   110 /   1053
+   111 /   1053
+   112 /   1053
+   113 /   1053
+   114 /   1053
+   115 /   1053
+   116 /   1053
+   117 /   1053
+   118 /   1053
+   119 /   1053
+   120 /   1053
+   121 /   1053
+   122 /   1053
+   123 /   1053
+   124 /   1053
+   125 /   1053
+   126 /   1053
+   127 /   1053
+   128 /   1053
+   129 /   1053
+   130 /   1053
+   131 /   1053
+   132 /   1053
+   133 /   1053
+   134 /   1053
+   135 /   1053
+   136 /   1053
+   137 /   1053
+   138 /   1053
+   139 /   1053
+   140 /   1053
+   141 /   1053
+   142 /   1053
+   143 /   1053
+   144 /   1053
+   145 /   1053
+   146 /   1053
+   147 /   1053
+   148 /   1053
+   149 /   1053
+   150 /   1053
+   151 /   1053
+   152 /   1053
+   153 /   1053
+   154 /   1053
+   155 /   1053
+   156 /   1053
+   157 /   1053
+   158 /   1053
+   159 /   1053
+   160 /   1053
+   161 /   1053
+   162 /   1053
+   163 /   1053
+   164 /   1053
+   165 /   1053
+   166 /   1053
+   167 /   1053
+   168 /   1053
+   169 /   1053
+   170 /   1053
+   171 /   1053
+   172 /   1053
+   173 /   1053
+   174 /   1053
+   175 /   1053
+   176 /   1053
+   177 /   1053
+   178 /   1053
+   179 /   1053
+   180 /   1053
+   181 /   1053
+   182 /   1053
+   183 /   1053
+   184 /   1053
+   185 /   1053
+   186 /   1053
+   187 /   1053
+   188 /   1053
+   189 /   1053
+   190 /   1053
+   191 /   1053
+   192 /   1053
+   193 /   1053
+   194 /   1053
+   195 /   1053
+   196 /   1053
+   197 /   1053
+   198 /   1053
+   199 /   1053
+   200 /   1053
+   201 /   1053
+   202 /   1053
+   203 /   1053
+   204 /   1053
+   205 /   1053
+   206 /   1053
+   207 /   1053
+   208 /   1053
+   209 /   1053
+   210 /   1053
+   211 /   1053
+   212 /   1053
+   213 /   1053
+   214 /   1053
+   215 /   1053
+   216 /   1053
+   217 /   1053
+   218 /   1053
+   219 /   1053
+   220 /   1053
+   221 /   1053
+   222 /   1053
+   223 /   1053
+   224 /   1053
+   225 /   1053
+   226 /   1053
+   227 /   1053
+   228 /   1053
+   229 /   1053
+   230 /   1053
+   231 /   1053
+   232 /   1053
+   233 /   1053
+   234 /   1053
+   235 /   1053
+   236 /   1053
+   237 /   1053
+   238 /   1053
+   239 /   1053
+   240 /   1053
+   241 /   1053
+   242 /   1053
+   243 /   1053
+   244 /   1053
+   245 /   1053
+   246 /   1053
+   247 /   1053
+   248 /   1053
+   249 /   1053
+   250 /   1053
+   251 /   1053
+   252 /   1053
+   253 /   1053
+   254 /   1053
+   255 /   1053
+   256 /   1053
+   257 /   1053
+   258 /   1053
+   259 /   1053
+   260 /   1053
+   261 /   1053
+   262 /   1053
+   263 /   1053
+   264 /   1053
+   265 /   1053
+   266 /   1053
+   267 /   1053
+   268 /   1053
+   269 /   1053
+   270 /   1053
+   271 /   1053
+   272 /   1053
+   273 /   1053
+   274 /   1053
+   275 /   1053
+   276 /   1053
+   277 /   1053
+   278 /   1053
+   279 /   1053
+   280 /   1053
+   281 /   1053
+   282 /   1053
+   283 /   1053
+   284 /   1053
+   285 /   1053
+   286 /   1053
+   287 /   1053
+   288 /   1053
+   289 /   1053
+   290 /   1053
+   291 /   1053
+   292 /   1053
+   293 /   1053
+   294 /   1053
+   295 /   1053
+   296 /   1053
+   297 /   1053
+   298 /   1053
+   299 /   1053
+   300 /   1053
+   301 /   1053
+   302 /   1053
+   303 /   1053
+   304 /   1053
+   305 /   1053
+   306 /   1053
+   307 /   1053
+   308 /   1053
+   309 /   1053
+   310 /   1053
+   311 /   1053
+   312 /   1053
+   313 /   1053
+   314 /   1053
+   315 /   1053
+   316 /   1053
+   317 /   1053
+   318 /   1053
+   319 /   1053
+   320 /   1053
+   321 /   1053
+   322 /   1053
+   323 /   1053
+   324 /   1053
+   325 /   1053
+   326 /   1053
+   327 /   1053
+   328 /   1053
+   329 /   1053
+   330 /   1053
+   331 /   1053
+   332 /   1053
+   333 /   1053
+   334 /   1053
+   335 /   1053
+   336 /   1053
+   337 /   1053
+   338 /   1053
+   339 /   1053
+   340 /   1053
+   341 /   1053
+   342 /   1053
+   343 /   1053
+   344 /   1053
+   345 /   1053
+   346 /   1053
+   347 /   1053
+   348 /   1053
+   349 /   1053
+   350 /   1053
+   351 /   1053
+   352 /   1053
+   353 /   1053
+   354 /   1053
+   355 /   1053
+   356 /   1053
+   357 /   1053
+   358 /   1053
+   359 /   1053
+   360 /   1053
+   361 /   1053
+   362 /   1053
+   363 /   1053
+   364 /   1053
+   365 /   1053
+   366 /   1053
+   367 /   1053
+   368 /   1053
+   369 /   1053
+   370 /   1053
+   371 /   1053
+   372 /   1053
+   373 /   1053
+   374 /   1053
+   375 /   1053
+   376 /   1053
+   377 /   1053
+   378 /   1053
+   379 /   1053
+   380 /   1053
+   381 /   1053
+   382 /   1053
+   383 /   1053
+   384 /   1053
+   385 /   1053
+   386 /   1053
+   387 /   1053
+   388 /   1053
+   389 /   1053
+   390 /   1053
+   391 /   1053
+   392 /   1053
+   393 /   1053
+   394 /   1053
+   395 /   1053
+   396 /   1053
+   397 /   1053
+   398 /   1053
+   399 /   1053
+   400 /   1053
+   401 /   1053
+   402 /   1053
+   403 /   1053
+   404 /   1053
+   405 /   1053
+   406 /   1053
+   407 /   1053
+   408 /   1053
+   409 /   1053
+   410 /   1053
+   411 /   1053
+   412 /   1053
+   413 /   1053
+   414 /   1053
+   415 /   1053
+   416 /   1053
+   417 /   1053
+   418 /   1053
+   419 /   1053
+   420 /   1053
+   421 /   1053
+   422 /   1053
+   423 /   1053
+   424 /   1053
+   425 /   1053
+   426 /   1053
+   427 /   1053
+   428 /   1053
+   429 /   1053
+   430 /   1053
+   431 /   1053
+   432 /   1053
+   433 /   1053
+   434 /   1053
+   435 /   1053
+   436 /   1053
+   437 /   1053
+   438 /   1053
+   439 /   1053
+   440 /   1053
+   441 /   1053
+   442 /   1053
+   443 /   1053
+   444 /   1053
+   445 /   1053
+   446 /   1053
+   447 /   1053
+   448 /   1053
+   449 /   1053
+   450 /   1053
+   451 /   1053
+   452 /   1053
+   453 /   1053
+   454 /   1053
+   455 /   1053
+   456 /   1053
+   457 /   1053
+   458 /   1053
+   459 /   1053
+   460 /   1053
+   461 /   1053
+   462 /   1053
+   463 /   1053
+   464 /   1053
+   465 /   1053
+   466 /   1053
+   467 /   1053
+   468 /   1053
+   469 /   1053
+   470 /   1053
+   471 /   1053
+   472 /   1053
+   473 /   1053
+   474 /   1053
+   475 /   1053
+   476 /   1053
+   477 /   1053
+   478 /   1053
+   479 /   1053
+   480 /   1053
+   481 /   1053
+   482 /   1053
+   483 /   1053
+   484 /   1053
+   485 /   1053
+   486 /   1053
+   487 /   1053
+   488 /   1053
+   489 /   1053
+   490 /   1053
+   491 /   1053
+   492 /   1053
+   493 /   1053
+   494 /   1053
+   495 /   1053
+   496 /   1053
+   497 /   1053
+   498 /   1053
+   499 /   1053
+   500 /   1053
+   501 /   1053
+   502 /   1053
+   503 /   1053
+   504 /   1053
+   505 /   1053
+   506 /   1053
+   507 /   1053
+   508 /   1053
+   509 /   1053
+   510 /   1053
+   511 /   1053
+   512 /   1053
+   513 /   1053
+   514 /   1053
+   515 /   1053
+   516 /   1053
+   517 /   1053
+   518 /   1053
+   519 /   1053
+   520 /   1053
+   521 /   1053
+   522 /   1053
+   523 /   1053
+   524 /   1053
+   525 /   1053
+   526 /   1053
+   527 /   1053
+   528 /   1053
+   529 /   1053
+   530 /   1053
+   531 /   1053
+   532 /   1053
+   533 /   1053
+   534 /   1053
+   535 /   1053
+   536 /   1053
+   537 /   1053
+   538 /   1053
+   539 /   1053
+   540 /   1053
+   541 /   1053
+   542 /   1053
+   543 /   1053
+   544 /   1053
+   545 /   1053
+   546 /   1053
+   547 /   1053
+   548 /   1053
+   549 /   1053
+   550 /   1053
+   551 /   1053
+   552 /   1053
+   553 /   1053
+   554 /   1053
+   555 /   1053
+   556 /   1053
+   557 /   1053
+   558 /   1053
+   559 /   1053
+   560 /   1053
+   561 /   1053
+   562 /   1053
+   563 /   1053
+   564 /   1053
+   565 /   1053
+   566 /   1053
+   567 /   1053
+   568 /   1053
+   569 /   1053
+   570 /   1053
+   571 /   1053
+   572 /   1053
+   573 /   1053
+   574 /   1053
+   575 /   1053
+   576 /   1053
+   577 /   1053
+   578 /   1053
+   579 /   1053
+   580 /   1053
+   581 /   1053
+   582 /   1053
+   583 /   1053
+   584 /   1053
+   585 /   1053
+   586 /   1053
+   587 /   1053
+   588 /   1053
+   589 /   1053
+   590 /   1053
+   591 /   1053
+   592 /   1053
+   593 /   1053
+   594 /   1053
+   595 /   1053
+   596 /   1053
+   597 /   1053
+   598 /   1053
+   599 /   1053
+   600 /   1053
+   601 /   1053
+   602 /   1053
+   603 /   1053
+   604 /   1053
+   605 /   1053
+   606 /   1053
+   607 /   1053
+   608 /   1053
+   609 /   1053
+   610 /   1053
+   611 /   1053
+   612 /   1053
+   613 /   1053
+   614 /   1053
+   615 /   1053
+   616 /   1053
+   617 /   1053
+   618 /   1053
+   619 /   1053
+   620 /   1053
+   621 /   1053
+   622 /   1053
+   623 /   1053
+   624 /   1053
+   625 /   1053
+   626 /   1053
+   627 /   1053
+   628 /   1053
+   629 /   1053
+   630 /   1053
+   631 /   1053
+   632 /   1053
+   633 /   1053
+   634 /   1053
+   635 /   1053
+   636 /   1053
+   637 /   1053
+   638 /   1053
+   639 /   1053
+   640 /   1053
+   641 /   1053
+   642 /   1053
+   643 /   1053
+   644 /   1053
+   645 /   1053
+   646 /   1053
+   647 /   1053
+   648 /   1053
+   649 /   1053
+   650 /   1053
+   651 /   1053
+   652 /   1053
+   653 /   1053
+   654 /   1053
+   655 /   1053
+   656 /   1053
+   657 /   1053
+   658 /   1053
+   659 /   1053
+   660 /   1053
+   661 /   1053
+   662 /   1053
+   663 /   1053
+   664 /   1053
+   665 /   1053
+   666 /   1053
+   667 /   1053
+   668 /   1053
+   669 /   1053
+   670 /   1053
+   671 /   1053
+   672 /   1053
+   673 /   1053
+   674 /   1053
+   675 /   1053
+   676 /   1053
+   677 /   1053
+   678 /   1053
+   679 /   1053
+   680 /   1053
+   681 /   1053
+   682 /   1053
+   683 /   1053
+   684 /   1053
+   685 /   1053
+   686 /   1053
+   687 /   1053
+   688 /   1053
+   689 /   1053
+   690 /   1053
+   691 /   1053
+   692 /   1053
+   693 /   1053
+   694 /   1053
+   695 /   1053
+   696 /   1053
+   697 /   1053
+   698 /   1053
+   699 /   1053
+   700 /   1053
+   701 /   1053
+   702 /   1053
+   703 /   1053
+   704 /   1053
+   705 /   1053
+   706 /   1053
+   707 /   1053
+   708 /   1053
+   709 /   1053
+   710 /   1053
+   711 /   1053
+   712 /   1053
+   713 /   1053
+   714 /   1053
+   715 /   1053
+   716 /   1053
+   717 /   1053
+   718 /   1053
+   719 /   1053
+   720 /   1053
+   721 /   1053
+   722 /   1053
+   723 /   1053
+   724 /   1053
+   725 /   1053
+   726 /   1053
+   727 /   1053
+   728 /   1053
+   729 /   1053
+   730 /   1053
+   731 /   1053
+   732 /   1053
+   733 /   1053
+   734 /   1053
+   735 /   1053
+   736 /   1053
+   737 /   1053
+   738 /   1053
+   739 /   1053
+   740 /   1053
+   741 /   1053
+   742 /   1053
+   743 /   1053
+   744 /   1053
+   745 /   1053
+   746 /   1053
+   747 /   1053
+   748 /   1053
+   749 /   1053
+   750 /   1053
+   751 /   1053
+   752 /   1053
+   753 /   1053
+   754 /   1053
+   755 /   1053
+   756 /   1053
+   757 /   1053
+   758 /   1053
+   759 /   1053
+   760 /   1053
+   761 /   1053
+   762 /   1053
+   763 /   1053
+   764 /   1053
+   765 /   1053
+   766 /   1053
+   767 /   1053
+   768 /   1053
+   769 /   1053
+   770 /   1053
+   771 /   1053
+   772 /   1053
+   773 /   1053
+   774 /   1053
+   775 /   1053
+   776 /   1053
+   777 /   1053
+   778 /   1053
+   779 /   1053
+   780 /   1053
+   781 /   1053
+   782 /   1053
+   783 /   1053
+   784 /   1053
+   785 /   1053
+   786 /   1053
+   787 /   1053
+   788 /   1053
+   789 /   1053
+   790 /   1053
+   791 /   1053
+   792 /   1053
+   793 /   1053
+   794 /   1053
+   795 /   1053
+   796 /   1053
+   797 /   1053
+   798 /   1053
+   799 /   1053
+   800 /   1053
+   801 /   1053
+   802 /   1053
+   803 /   1053
+   804 /   1053
+   805 /   1053
+   806 /   1053
+   807 /   1053
+   808 /   1053
+   809 /   1053
+   810 /   1053
+   811 /   1053
+   812 /   1053
+   813 /   1053
+   814 /   1053
+   815 /   1053
+   816 /   1053
+   817 /   1053
+   818 /   1053
+   819 /   1053
+   820 /   1053
+   821 /   1053
+   822 /   1053
+   823 /   1053
+   824 /   1053
+   825 /   1053
+   826 /   1053
+   827 /   1053
+   828 /   1053
+   829 /   1053
+   830 /   1053
+   831 /   1053
+   832 /   1053
+   833 /   1053
+   834 /   1053
+   835 /   1053
+   836 /   1053
+   837 /   1053
+   838 /   1053
+   839 /   1053
+   840 /   1053
+   841 /   1053
+   842 /   1053
+   843 /   1053
+   844 /   1053
+   845 /   1053
+   846 /   1053
+   847 /   1053
+   848 /   1053
+   849 /   1053
+   850 /   1053
+   851 /   1053
+   852 /   1053
+   853 /   1053
+   854 /   1053
+   855 /   1053
+   856 /   1053
+   857 /   1053
+   858 /   1053
+   859 /   1053
+   860 /   1053
+   861 /   1053
+   862 /   1053
+   863 /   1053
+   864 /   1053
+   865 /   1053
+   866 /   1053
+   867 /   1053
+   868 /   1053
+   869 /   1053
+   870 /   1053
+   871 /   1053
+   872 /   1053
+   873 /   1053
+   874 /   1053
+   875 /   1053
+   876 /   1053
+   877 /   1053
+   878 /   1053
+   879 /   1053
+   880 /   1053
+   881 /   1053
+   882 /   1053
+   883 /   1053
+   884 /   1053
+   885 /   1053
+   886 /   1053
+   887 /   1053
+   888 /   1053
+   889 /   1053
+   890 /   1053
+   891 /   1053
+   892 /   1053
+   893 /   1053
+   894 /   1053
+   895 /   1053
+   896 /   1053
+   897 /   1053
+   898 /   1053
+   899 /   1053
+   900 /   1053
+   901 /   1053
+   902 /   1053
+   903 /   1053
+   904 /   1053
+   905 /   1053
+   906 /   1053
+   907 /   1053
+   908 /   1053
+   909 /   1053
+   910 /   1053
+   911 /   1053
+   912 /   1053
+   913 /   1053
+   914 /   1053
+   915 /   1053
+   916 /   1053
+   917 /   1053
+   918 /   1053
+   919 /   1053
+   920 /   1053
+   921 /   1053
+   922 /   1053
+   923 /   1053
+   924 /   1053
+   925 /   1053
+   926 /   1053
+   927 /   1053
+   928 /   1053
+   929 /   1053
+   930 /   1053
+   931 /   1053
+   932 /   1053
+   933 /   1053
+   934 /   1053
+   935 /   1053
+   936 /   1053
+   937 /   1053
+   938 /   1053
+   939 /   1053
+   940 /   1053
+   941 /   1053
+   942 /   1053
+   943 /   1053
+   944 /   1053
+   945 /   1053
+   946 /   1053
+   947 /   1053
+   948 /   1053
+   949 /   1053
+   950 /   1053
+   951 /   1053
+   952 /   1053
+   953 /   1053
+   954 /   1053
+   955 /   1053
+   956 /   1053
+   957 /   1053
+   958 /   1053
+   959 /   1053
+   960 /   1053
+   961 /   1053
+   962 /   1053
+   963 /   1053
+   964 /   1053
+   965 /   1053
+   966 /   1053
+   967 /   1053
+   968 /   1053
+   969 /   1053
+   970 /   1053
+   971 /   1053
+   972 /   1053
+   973 /   1053
+   974 /   1053
+   975 /   1053
+   976 /   1053
+   977 /   1053
+   978 /   1053
+   979 /   1053
+   980 /   1053
+   981 /   1053
+   982 /   1053
+   983 /   1053
+   984 /   1053
+   985 /   1053
+   986 /   1053
+   987 /   1053
+   988 /   1053
+   989 /   1053
+   990 /   1053
+   991 /   1053
+   992 /   1053
+   993 /   1053
+   994 /   1053
+   995 /   1053
+   996 /   1053
+   997 /   1053
+   998 /   1053
+   999 /   1053
+  1000 /   1053
+  1001 /   1053
+  1002 /   1053
+  1003 /   1053
+  1004 /   1053
+  1005 /   1053
+  1006 /   1053
+  1007 /   1053
+  1008 /   1053
+  1009 /   1053
+  1010 /   1053
+  1011 /   1053
+  1012 /   1053
+  1013 /   1053
+  1014 /   1053
+  1015 /   1053
+  1016 /   1053
+  1017 /   1053
+  1018 /   1053
+  1019 /   1053
+  1020 /   1053
+  1021 /   1053
+  1022 /   1053
+  1023 /   1053
+  1024 /   1053
+  1025 /   1053
+  1026 /   1053
+  1027 /   1053
+  1028 /   1053
+  1029 /   1053
+  1030 /   1053
+  1031 /   1053
+  1032 /   1053
+  1033 /   1053
+  1034 /   1053
+  1035 /   1053
+  1036 /   1053
+  1037 /   1053
+  1038 /   1053
+  1039 /   1053
+  1040 /   1053
+  1041 /   1053
+  1042 /   1053
+  1043 /   1053
+  1044 /   1053
+  1045 /   1053
+  1046 /   1053
+  1047 /   1053
+  1048 /   1053
+  1049 /   1053
+  1050 /   1053
+  1051 /   1053
+  1052 /   1053
+  1053 /   1053
+Music saved at: output/music.wav
+
+2025-07-09 14:53:05,645 - ERROR - STDERR:
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.0+cu121 with CUDA 1201 (you have 2.1.0+cpu)
+    Python  3.9.13 (you have 3.9.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+Traceback (most recent call last):
+  File "C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\xformers\_cpp_lib.py", line 121, in _register_extensions
+    torch.ops.load_library(ext_specs.origin)
+  File "C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\torch\_ops.py", line 852, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\SNEH\AppData\Local\Programs\Python\Python39\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\Lib\site-packages\xformers\_C.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\xformers\_cpp_lib.py", line 131, in <module>
+    _build_metadata = _register_extensions()
+  File "C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\xformers\_cpp_lib.py", line 123, in _register_extensions
+    raise xFormersInvalidLibException(build_metadata) from exc
+xformers._cpp_lib.xFormersInvalidLibException: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.0+cu121 with CUDA 1201 (you have 2.1.0+cpu)
+    Python  3.9.13 (you have 3.9.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\torch\nn\utils\weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+
+2025-07-09 14:53:05,645 - INFO - Mixing voice & music using tune_music.py
+2025-07-09 14:53:13,645 - INFO - tune_music.py Output:
+Final tuned mix exported: static/final_song.mp3
+
+2025-07-09 14:53:13,645 - INFO - Final MP3 available at: static/final_song.mp3
+2025-07-09 14:53:13,651 - INFO - 127.0.0.1 - - [09/Jul/2025 14:53:13] "POST /generate HTTP/1.1" 200 -
+2025-07-09 14:55:21,480 - INFO - 127.0.0.1 - - [09/Jul/2025 14:55:21] "[35m[1mGET /static/final_song.mp3 HTTP/1.1[0m" 206 -
+2025-07-09 14:55:25,292 - INFO - 127.0.0.1 - - [09/Jul/2025 14:55:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-09 14:55:28,678 - INFO - 127.0.0.1 - - [09/Jul/2025 14:55:28] "[35m[1mGET /static/final_song.mp3 HTTP/1.1[0m" 206 -
+2025-07-09 14:57:06,024 - INFO - 127.0.0.1 - - [09/Jul/2025 14:57:06] "GET / HTTP/1.1" 200 -
+2025-07-09 14:59:07,623 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-09 14:59:07,623 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 14:59:07,626 - INFO -  * Restarting with stat
+2025-07-09 14:59:08,023 - WARNING -  * Debugger is active!
+2025-07-09 14:59:08,027 - INFO -  * Debugger PIN: 133-803-107
+2025-07-09 14:59:35,171 - INFO - 127.0.0.1 - - [09/Jul/2025 14:59:35] "GET / HTTP/1.1" 200 -
+2025-07-09 14:59:53,429 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-09 14:59:53,429 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-09 14:59:53,431 - INFO -  * Restarting with stat
+2025-07-09 14:59:53,831 - WARNING -  * Debugger is active!
+2025-07-09 14:59:53,834 - INFO -  * Debugger PIN: 133-803-107
+2025-07-09 14:59:59,218 - INFO - 127.0.0.1 - - [09/Jul/2025 14:59:59] "GET / HTTP/1.1" 200 -
+2025-07-09 15:00:29,986 - INFO - Starting generation: energetic song, Genre: rock, Mood: energetic, Using audio: True
+2025-07-09 15:00:29,993 - INFO - Uploaded audio saved to: output\voice.wav
+2025-07-09 15:00:29,993 - INFO - Generating background music...
+2025-07-09 15:00:45,154 - INFO - Initializing MusicGen model (facebook/musicgen-small)...
+2025-07-09 15:00:54,324 - INFO - Setting generation parameters: duration=21
+2025-07-09 15:00:54,324 - INFO - Generating music for prompt: energetic song in rock style with energetic mood
+2025-07-09 15:00:54,420 - INFO - New pattern, time steps: 1050, sequence steps: 1054
+2025-07-09 15:03:42,642 - INFO - Music generated and saved at: output/music.wav
+2025-07-09 15:03:44,096 - INFO - STDOUT:
+     1 /   1053
+     2 /   1053
+     3 /   1053
+     4 /   1053
+     5 /   1053
+     6 /   1053
+     7 /   1053
+     8 /   1053
+     9 /   1053
+    10 /   1053
+    11 /   1053
+    12 /   1053
+    13 /   1053
+    14 /   1053
+    15 /   1053
+    16 /   1053
+    17 /   1053
+    18 /   1053
+    19 /   1053
+    20 /   1053
+    21 /   1053
+    22 /   1053
+    23 /   1053
+    24 /   1053
+    25 /   1053
+    26 /   1053
+    27 /   1053
+    28 /   1053
+    29 /   1053
+    30 /   1053
+    31 /   1053
+    32 /   1053
+    33 /   1053
+    34 /   1053
+    35 /   1053
+    36 /   1053
+    37 /   1053
+    38 /   1053
+    39 /   1053
+    40 /   1053
+    41 /   1053
+    42 /   1053
+    43 /   1053
+    44 /   1053
+    45 /   1053
+    46 /   1053
+    47 /   1053
+    48 /   1053
+    49 /   1053
+    50 /   1053
+    51 /   1053
+    52 /   1053
+    53 /   1053
+    54 /   1053
+    55 /   1053
+    56 /   1053
+    57 /   1053
+    58 /   1053
+    59 /   1053
+    60 /   1053
+    61 /   1053
+    62 /   1053
+    63 /   1053
+    64 /   1053
+    65 /   1053
+    66 /   1053
+    67 /   1053
+    68 /   1053
+    69 /   1053
+    70 /   1053
+    71 /   1053
+    72 /   1053
+    73 /   1053
+    74 /   1053
+    75 /   1053
+    76 /   1053
+    77 /   1053
+    78 /   1053
+    79 /   1053
+    80 /   1053
+    81 /   1053
+    82 /   1053
+    83 /   1053
+    84 /   1053
+    85 /   1053
+    86 /   1053
+    87 /   1053
+    88 /   1053
+    89 /   1053
+    90 /   1053
+    91 /   1053
+    92 /   1053
+    93 /   1053
+    94 /   1053
+    95 /   1053
+    96 /   1053
+    97 /   1053
+    98 /   1053
+    99 /   1053
+   100 /   1053
+   101 /   1053
+   102 /   1053
+   103 /   1053
+   104 /   1053
+   105 /   1053
+   106 /   1053
+   107 /   1053
+   108 /   1053
+   109 /   1053
+   110 /   1053
+   111 /   1053
+   112 /   1053
+   113 /   1053
+   114 /   1053
+   115 /   1053
+   116 /   1053
+   117 /   1053
+   118 /   1053
+   119 /   1053
+   120 /   1053
+   121 /   1053
+   122 /   1053
+   123 /   1053
+   124 /   1053
+   125 /   1053
+   126 /   1053
+   127 /   1053
+   128 /   1053
+   129 /   1053
+   130 /   1053
+   131 /   1053
+   132 /   1053
+   133 /   1053
+   134 /   1053
+   135 /   1053
+   136 /   1053
+   137 /   1053
+   138 /   1053
+   139 /   1053
+   140 /   1053
+   141 /   1053
+   142 /   1053
+   143 /   1053
+   144 /   1053
+   145 /   1053
+   146 /   1053
+   147 /   1053
+   148 /   1053
+   149 /   1053
+   150 /   1053
+   151 /   1053
+   152 /   1053
+   153 /   1053
+   154 /   1053
+   155 /   1053
+   156 /   1053
+   157 /   1053
+   158 /   1053
+   159 /   1053
+   160 /   1053
+   161 /   1053
+   162 /   1053
+   163 /   1053
+   164 /   1053
+   165 /   1053
+   166 /   1053
+   167 /   1053
+   168 /   1053
+   169 /   1053
+   170 /   1053
+   171 /   1053
+   172 /   1053
+   173 /   1053
+   174 /   1053
+   175 /   1053
+   176 /   1053
+   177 /   1053
+   178 /   1053
+   179 /   1053
+   180 /   1053
+   181 /   1053
+   182 /   1053
+   183 /   1053
+   184 /   1053
+   185 /   1053
+   186 /   1053
+   187 /   1053
+   188 /   1053
+   189 /   1053
+   190 /   1053
+   191 /   1053
+   192 /   1053
+   193 /   1053
+   194 /   1053
+   195 /   1053
+   196 /   1053
+   197 /   1053
+   198 /   1053
+   199 /   1053
+   200 /   1053
+   201 /   1053
+   202 /   1053
+   203 /   1053
+   204 /   1053
+   205 /   1053
+   206 /   1053
+   207 /   1053
+   208 /   1053
+   209 /   1053
+   210 /   1053
+   211 /   1053
+   212 /   1053
+   213 /   1053
+   214 /   1053
+   215 /   1053
+   216 /   1053
+   217 /   1053
+   218 /   1053
+   219 /   1053
+   220 /   1053
+   221 /   1053
+   222 /   1053
+   223 /   1053
+   224 /   1053
+   225 /   1053
+   226 /   1053
+   227 /   1053
+   228 /   1053
+   229 /   1053
+   230 /   1053
+   231 /   1053
+   232 /   1053
+   233 /   1053
+   234 /   1053
+   235 /   1053
+   236 /   1053
+   237 /   1053
+   238 /   1053
+   239 /   1053
+   240 /   1053
+   241 /   1053
+   242 /   1053
+   243 /   1053
+   244 /   1053
+   245 /   1053
+   246 /   1053
+   247 /   1053
+   248 /   1053
+   249 /   1053
+   250 /   1053
+   251 /   1053
+   252 /   1053
+   253 /   1053
+   254 /   1053
+   255 /   1053
+   256 /   1053
+   257 /   1053
+   258 /   1053
+   259 /   1053
+   260 /   1053
+   261 /   1053
+   262 /   1053
+   263 /   1053
+   264 /   1053
+   265 /   1053
+   266 /   1053
+   267 /   1053
+   268 /   1053
+   269 /   1053
+   270 /   1053
+   271 /   1053
+   272 /   1053
+   273 /   1053
+   274 /   1053
+   275 /   1053
+   276 /   1053
+   277 /   1053
+   278 /   1053
+   279 /   1053
+   280 /   1053
+   281 /   1053
+   282 /   1053
+   283 /   1053
+   284 /   1053
+   285 /   1053
+   286 /   1053
+   287 /   1053
+   288 /   1053
+   289 /   1053
+   290 /   1053
+   291 /   1053
+   292 /   1053
+   293 /   1053
+   294 /   1053
+   295 /   1053
+   296 /   1053
+   297 /   1053
+   298 /   1053
+   299 /   1053
+   300 /   1053
+   301 /   1053
+   302 /   1053
+   303 /   1053
+   304 /   1053
+   305 /   1053
+   306 /   1053
+   307 /   1053
+   308 /   1053
+   309 /   1053
+   310 /   1053
+   311 /   1053
+   312 /   1053
+   313 /   1053
+   314 /   1053
+   315 /   1053
+   316 /   1053
+   317 /   1053
+   318 /   1053
+   319 /   1053
+   320 /   1053
+   321 /   1053
+   322 /   1053
+   323 /   1053
+   324 /   1053
+   325 /   1053
+   326 /   1053
+   327 /   1053
+   328 /   1053
+   329 /   1053
+   330 /   1053
+   331 /   1053
+   332 /   1053
+   333 /   1053
+   334 /   1053
+   335 /   1053
+   336 /   1053
+   337 /   1053
+   338 /   1053
+   339 /   1053
+   340 /   1053
+   341 /   1053
+   342 /   1053
+   343 /   1053
+   344 /   1053
+   345 /   1053
+   346 /   1053
+   347 /   1053
+   348 /   1053
+   349 /   1053
+   350 /   1053
+   351 /   1053
+   352 /   1053
+   353 /   1053
+   354 /   1053
+   355 /   1053
+   356 /   1053
+   357 /   1053
+   358 /   1053
+   359 /   1053
+   360 /   1053
+   361 /   1053
+   362 /   1053
+   363 /   1053
+   364 /   1053
+   365 /   1053
+   366 /   1053
+   367 /   1053
+   368 /   1053
+   369 /   1053
+   370 /   1053
+   371 /   1053
+   372 /   1053
+   373 /   1053
+   374 /   1053
+   375 /   1053
+   376 /   1053
+   377 /   1053
+   378 /   1053
+   379 /   1053
+   380 /   1053
+   381 /   1053
+   382 /   1053
+   383 /   1053
+   384 /   1053
+   385 /   1053
+   386 /   1053
+   387 /   1053
+   388 /   1053
+   389 /   1053
+   390 /   1053
+   391 /   1053
+   392 /   1053
+   393 /   1053
+   394 /   1053
+   395 /   1053
+   396 /   1053
+   397 /   1053
+   398 /   1053
+   399 /   1053
+   400 /   1053
+   401 /   1053
+   402 /   1053
+   403 /   1053
+   404 /   1053
+   405 /   1053
+   406 /   1053
+   407 /   1053
+   408 /   1053
+   409 /   1053
+   410 /   1053
+   411 /   1053
+   412 /   1053
+   413 /   1053
+   414 /   1053
+   415 /   1053
+   416 /   1053
+   417 /   1053
+   418 /   1053
+   419 /   1053
+   420 /   1053
+   421 /   1053
+   422 /   1053
+   423 /   1053
+   424 /   1053
+   425 /   1053
+   426 /   1053
+   427 /   1053
+   428 /   1053
+   429 /   1053
+   430 /   1053
+   431 /   1053
+   432 /   1053
+   433 /   1053
+   434 /   1053
+   435 /   1053
+   436 /   1053
+   437 /   1053
+   438 /   1053
+   439 /   1053
+   440 /   1053
+   441 /   1053
+   442 /   1053
+   443 /   1053
+   444 /   1053
+   445 /   1053
+   446 /   1053
+   447 /   1053
+   448 /   1053
+   449 /   1053
+   450 /   1053
+   451 /   1053
+   452 /   1053
+   453 /   1053
+   454 /   1053
+   455 /   1053
+   456 /   1053
+   457 /   1053
+   458 /   1053
+   459 /   1053
+   460 /   1053
+   461 /   1053
+   462 /   1053
+   463 /   1053
+   464 /   1053
+   465 /   1053
+   466 /   1053
+   467 /   1053
+   468 /   1053
+   469 /   1053
+   470 /   1053
+   471 /   1053
+   472 /   1053
+   473 /   1053
+   474 /   1053
+   475 /   1053
+   476 /   1053
+   477 /   1053
+   478 /   1053
+   479 /   1053
+   480 /   1053
+   481 /   1053
+   482 /   1053
+   483 /   1053
+   484 /   1053
+   485 /   1053
+   486 /   1053
+   487 /   1053
+   488 /   1053
+   489 /   1053
+   490 /   1053
+   491 /   1053
+   492 /   1053
+   493 /   1053
+   494 /   1053
+   495 /   1053
+   496 /   1053
+   497 /   1053
+   498 /   1053
+   499 /   1053
+   500 /   1053
+   501 /   1053
+   502 /   1053
+   503 /   1053
+   504 /   1053
+   505 /   1053
+   506 /   1053
+   507 /   1053
+   508 /   1053
+   509 /   1053
+   510 /   1053
+   511 /   1053
+   512 /   1053
+   513 /   1053
+   514 /   1053
+   515 /   1053
+   516 /   1053
+   517 /   1053
+   518 /   1053
+   519 /   1053
+   520 /   1053
+   521 /   1053
+   522 /   1053
+   523 /   1053
+   524 /   1053
+   525 /   1053
+   526 /   1053
+   527 /   1053
+   528 /   1053
+   529 /   1053
+   530 /   1053
+   531 /   1053
+   532 /   1053
+   533 /   1053
+   534 /   1053
+   535 /   1053
+   536 /   1053
+   537 /   1053
+   538 /   1053
+   539 /   1053
+   540 /   1053
+   541 /   1053
+   542 /   1053
+   543 /   1053
+   544 /   1053
+   545 /   1053
+   546 /   1053
+   547 /   1053
+   548 /   1053
+   549 /   1053
+   550 /   1053
+   551 /   1053
+   552 /   1053
+   553 /   1053
+   554 /   1053
+   555 /   1053
+   556 /   1053
+   557 /   1053
+   558 /   1053
+   559 /   1053
+   560 /   1053
+   561 /   1053
+   562 /   1053
+   563 /   1053
+   564 /   1053
+   565 /   1053
+   566 /   1053
+   567 /   1053
+   568 /   1053
+   569 /   1053
+   570 /   1053
+   571 /   1053
+   572 /   1053
+   573 /   1053
+   574 /   1053
+   575 /   1053
+   576 /   1053
+   577 /   1053
+   578 /   1053
+   579 /   1053
+   580 /   1053
+   581 /   1053
+   582 /   1053
+   583 /   1053
+   584 /   1053
+   585 /   1053
+   586 /   1053
+   587 /   1053
+   588 /   1053
+   589 /   1053
+   590 /   1053
+   591 /   1053
+   592 /   1053
+   593 /   1053
+   594 /   1053
+   595 /   1053
+   596 /   1053
+   597 /   1053
+   598 /   1053
+   599 /   1053
+   600 /   1053
+   601 /   1053
+   602 /   1053
+   603 /   1053
+   604 /   1053
+   605 /   1053
+   606 /   1053
+   607 /   1053
+   608 /   1053
+   609 /   1053
+   610 /   1053
+   611 /   1053
+   612 /   1053
+   613 /   1053
+   614 /   1053
+   615 /   1053
+   616 /   1053
+   617 /   1053
+   618 /   1053
+   619 /   1053
+   620 /   1053
+   621 /   1053
+   622 /   1053
+   623 /   1053
+   624 /   1053
+   625 /   1053
+   626 /   1053
+   627 /   1053
+   628 /   1053
+   629 /   1053
+   630 /   1053
+   631 /   1053
+   632 /   1053
+   633 /   1053
+   634 /   1053
+   635 /   1053
+   636 /   1053
+   637 /   1053
+   638 /   1053
+   639 /   1053
+   640 /   1053
+   641 /   1053
+   642 /   1053
+   643 /   1053
+   644 /   1053
+   645 /   1053
+   646 /   1053
+   647 /   1053
+   648 /   1053
+   649 /   1053
+   650 /   1053
+   651 /   1053
+   652 /   1053
+   653 /   1053
+   654 /   1053
+   655 /   1053
+   656 /   1053
+   657 /   1053
+   658 /   1053
+   659 /   1053
+   660 /   1053
+   661 /   1053
+   662 /   1053
+   663 /   1053
+   664 /   1053
+   665 /   1053
+   666 /   1053
+   667 /   1053
+   668 /   1053
+   669 /   1053
+   670 /   1053
+   671 /   1053
+   672 /   1053
+   673 /   1053
+   674 /   1053
+   675 /   1053
+   676 /   1053
+   677 /   1053
+   678 /   1053
+   679 /   1053
+   680 /   1053
+   681 /   1053
+   682 /   1053
+   683 /   1053
+   684 /   1053
+   685 /   1053
+   686 /   1053
+   687 /   1053
+   688 /   1053
+   689 /   1053
+   690 /   1053
+   691 /   1053
+   692 /   1053
+   693 /   1053
+   694 /   1053
+   695 /   1053
+   696 /   1053
+   697 /   1053
+   698 /   1053
+   699 /   1053
+   700 /   1053
+   701 /   1053
+   702 /   1053
+   703 /   1053
+   704 /   1053
+   705 /   1053
+   706 /   1053
+   707 /   1053
+   708 /   1053
+   709 /   1053
+   710 /   1053
+   711 /   1053
+   712 /   1053
+   713 /   1053
+   714 /   1053
+   715 /   1053
+   716 /   1053
+   717 /   1053
+   718 /   1053
+   719 /   1053
+   720 /   1053
+   721 /   1053
+   722 /   1053
+   723 /   1053
+   724 /   1053
+   725 /   1053
+   726 /   1053
+   727 /   1053
+   728 /   1053
+   729 /   1053
+   730 /   1053
+   731 /   1053
+   732 /   1053
+   733 /   1053
+   734 /   1053
+   735 /   1053
+   736 /   1053
+   737 /   1053
+   738 /   1053
+   739 /   1053
+   740 /   1053
+   741 /   1053
+   742 /   1053
+   743 /   1053
+   744 /   1053
+   745 /   1053
+   746 /   1053
+   747 /   1053
+   748 /   1053
+   749 /   1053
+   750 /   1053
+   751 /   1053
+   752 /   1053
+   753 /   1053
+   754 /   1053
+   755 /   1053
+   756 /   1053
+   757 /   1053
+   758 /   1053
+   759 /   1053
+   760 /   1053
+   761 /   1053
+   762 /   1053
+   763 /   1053
+   764 /   1053
+   765 /   1053
+   766 /   1053
+   767 /   1053
+   768 /   1053
+   769 /   1053
+   770 /   1053
+   771 /   1053
+   772 /   1053
+   773 /   1053
+   774 /   1053
+   775 /   1053
+   776 /   1053
+   777 /   1053
+   778 /   1053
+   779 /   1053
+   780 /   1053
+   781 /   1053
+   782 /   1053
+   783 /   1053
+   784 /   1053
+   785 /   1053
+   786 /   1053
+   787 /   1053
+   788 /   1053
+   789 /   1053
+   790 /   1053
+   791 /   1053
+   792 /   1053
+   793 /   1053
+   794 /   1053
+   795 /   1053
+   796 /   1053
+   797 /   1053
+   798 /   1053
+   799 /   1053
+   800 /   1053
+   801 /   1053
+   802 /   1053
+   803 /   1053
+   804 /   1053
+   805 /   1053
+   806 /   1053
+   807 /   1053
+   808 /   1053
+   809 /   1053
+   810 /   1053
+   811 /   1053
+   812 /   1053
+   813 /   1053
+   814 /   1053
+   815 /   1053
+   816 /   1053
+   817 /   1053
+   818 /   1053
+   819 /   1053
+   820 /   1053
+   821 /   1053
+   822 /   1053
+   823 /   1053
+   824 /   1053
+   825 /   1053
+   826 /   1053
+   827 /   1053
+   828 /   1053
+   829 /   1053
+   830 /   1053
+   831 /   1053
+   832 /   1053
+   833 /   1053
+   834 /   1053
+   835 /   1053
+   836 /   1053
+   837 /   1053
+   838 /   1053
+   839 /   1053
+   840 /   1053
+   841 /   1053
+   842 /   1053
+   843 /   1053
+   844 /   1053
+   845 /   1053
+   846 /   1053
+   847 /   1053
+   848 /   1053
+   849 /   1053
+   850 /   1053
+   851 /   1053
+   852 /   1053
+   853 /   1053
+   854 /   1053
+   855 /   1053
+   856 /   1053
+   857 /   1053
+   858 /   1053
+   859 /   1053
+   860 /   1053
+   861 /   1053
+   862 /   1053
+   863 /   1053
+   864 /   1053
+   865 /   1053
+   866 /   1053
+   867 /   1053
+   868 /   1053
+   869 /   1053
+   870 /   1053
+   871 /   1053
+   872 /   1053
+   873 /   1053
+   874 /   1053
+   875 /   1053
+   876 /   1053
+   877 /   1053
+   878 /   1053
+   879 /   1053
+   880 /   1053
+   881 /   1053
+   882 /   1053
+   883 /   1053
+   884 /   1053
+   885 /   1053
+   886 /   1053
+   887 /   1053
+   888 /   1053
+   889 /   1053
+   890 /   1053
+   891 /   1053
+   892 /   1053
+   893 /   1053
+   894 /   1053
+   895 /   1053
+   896 /   1053
+   897 /   1053
+   898 /   1053
+   899 /   1053
+   900 /   1053
+   901 /   1053
+   902 /   1053
+   903 /   1053
+   904 /   1053
+   905 /   1053
+   906 /   1053
+   907 /   1053
+   908 /   1053
+   909 /   1053
+   910 /   1053
+   911 /   1053
+   912 /   1053
+   913 /   1053
+   914 /   1053
+   915 /   1053
+   916 /   1053
+   917 /   1053
+   918 /   1053
+   919 /   1053
+   920 /   1053
+   921 /   1053
+   922 /   1053
+   923 /   1053
+   924 /   1053
+   925 /   1053
+   926 /   1053
+   927 /   1053
+   928 /   1053
+   929 /   1053
+   930 /   1053
+   931 /   1053
+   932 /   1053
+   933 /   1053
+   934 /   1053
+   935 /   1053
+   936 /   1053
+   937 /   1053
+   938 /   1053
+   939 /   1053
+   940 /   1053
+   941 /   1053
+   942 /   1053
+   943 /   1053
+   944 /   1053
+   945 /   1053
+   946 /   1053
+   947 /   1053
+   948 /   1053
+   949 /   1053
+   950 /   1053
+   951 /   1053
+   952 /   1053
+   953 /   1053
+   954 /   1053
+   955 /   1053
+   956 /   1053
+   957 /   1053
+   958 /   1053
+   959 /   1053
+   960 /   1053
+   961 /   1053
+   962 /   1053
+   963 /   1053
+   964 /   1053
+   965 /   1053
+   966 /   1053
+   967 /   1053
+   968 /   1053
+   969 /   1053
+   970 /   1053
+   971 /   1053
+   972 /   1053
+   973 /   1053
+   974 /   1053
+   975 /   1053
+   976 /   1053
+   977 /   1053
+   978 /   1053
+   979 /   1053
+   980 /   1053
+   981 /   1053
+   982 /   1053
+   983 /   1053
+   984 /   1053
+   985 /   1053
+   986 /   1053
+   987 /   1053
+   988 /   1053
+   989 /   1053
+   990 /   1053
+   991 /   1053
+   992 /   1053
+   993 /   1053
+   994 /   1053
+   995 /   1053
+   996 /   1053
+   997 /   1053
+   998 /   1053
+   999 /   1053
+  1000 /   1053
+  1001 /   1053
+  1002 /   1053
+  1003 /   1053
+  1004 /   1053
+  1005 /   1053
+  1006 /   1053
+  1007 /   1053
+  1008 /   1053
+  1009 /   1053
+  1010 /   1053
+  1011 /   1053
+  1012 /   1053
+  1013 /   1053
+  1014 /   1053
+  1015 /   1053
+  1016 /   1053
+  1017 /   1053
+  1018 /   1053
+  1019 /   1053
+  1020 /   1053
+  1021 /   1053
+  1022 /   1053
+  1023 /   1053
+  1024 /   1053
+  1025 /   1053
+  1026 /   1053
+  1027 /   1053
+  1028 /   1053
+  1029 /   1053
+  1030 /   1053
+  1031 /   1053
+  1032 /   1053
+  1033 /   1053
+  1034 /   1053
+  1035 /   1053
+  1036 /   1053
+  1037 /   1053
+  1038 /   1053
+  1039 /   1053
+  1040 /   1053
+  1041 /   1053
+  1042 /   1053
+  1043 /   1053
+  1044 /   1053
+  1045 /   1053
+  1046 /   1053
+  1047 /   1053
+  1048 /   1053
+  1049 /   1053
+  1050 /   1053
+  1051 /   1053
+  1052 /   1053
+  1053 /   1053
+Music saved at: output/music.wav
+
+2025-07-09 15:03:44,097 - ERROR - STDERR:
+WARNING[XFORMERS]: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.0+cu121 with CUDA 1201 (you have 2.1.0+cpu)
+    Python  3.9.13 (you have 3.9.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+Traceback (most recent call last):
+  File "C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\xformers\_cpp_lib.py", line 121, in _register_extensions
+    torch.ops.load_library(ext_specs.origin)
+  File "C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\torch\_ops.py", line 852, in load_library
+    ctypes.CDLL(path)
+  File "C:\Users\SNEH\AppData\Local\Programs\Python\Python39\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\Lib\site-packages\xformers\_C.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\xformers\_cpp_lib.py", line 131, in <module>
+    _build_metadata = _register_extensions()
+  File "C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\xformers\_cpp_lib.py", line 123, in _register_extensions
+    raise xFormersInvalidLibException(build_metadata) from exc
+xformers._cpp_lib.xFormersInvalidLibException: xFormers can't load C++/CUDA extensions. xFormers was built for:
+    PyTorch 2.1.0+cu121 with CUDA 1201 (you have 2.1.0+cpu)
+    Python  3.9.13 (you have 3.9.13)
+  Please reinstall xformers (see https://github.com/facebookresearch/xformers#installing-xformers)
+  Memory-efficient attention, SwiGLU, sparse and more won't be available.
+C:\Users\SNEH\Desktop\AI MUSIC\sound\audiocraft_env\lib\site-packages\torch\nn\utils\weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+
+2025-07-09 15:03:44,097 - INFO - Mixing voice & music using tune_music.py
+2025-07-09 15:03:52,294 - INFO - tune_music.py Output:
+Final tuned mix exported: static/final_song.mp3
+
+2025-07-09 15:03:52,295 - INFO - Final MP3 available at: static/final_song.mp3
+2025-07-09 15:03:52,302 - INFO - 127.0.0.1 - - [09/Jul/2025 15:03:52] "POST /generate HTTP/1.1" 200 -
+2025-07-09 15:04:04,745 - INFO - 127.0.0.1 - - [09/Jul/2025 15:04:04] "[35m[1mGET /static/final_song.mp3 HTTP/1.1[0m" 206 -
+2025-07-09 15:04:05,991 - INFO - 127.0.0.1 - - [09/Jul/2025 15:04:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-09 15:04:09,285 - INFO - 127.0.0.1 - - [09/Jul/2025 15:04:09] "[35m[1mGET /static/final_song.mp3 HTTP/1.1[0m" 206 -
+2025-07-09 15:04:29,711 - INFO - 127.0.0.1 - - [09/Jul/2025 15:04:29] "GET / HTTP/1.1" 200 -
+2025-07-11 09:29:10,289 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-11 09:29:10,289 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-11 09:29:10,292 - INFO -  * Restarting with stat
+2025-07-11 09:29:10,668 - WARNING -  * Debugger is active!
+2025-07-11 09:29:10,709 - INFO -  * Debugger PIN: 133-803-107
+2025-07-11 09:29:21,160 - INFO - 127.0.0.1 - - [11/Jul/2025 09:29:21] "GET / HTTP/1.1" 200 -
+2025-07-11 09:29:21,744 - INFO - 127.0.0.1 - - [11/Jul/2025 09:29:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-11 09:30:06,411 - INFO -  * Detected change in 'c:\\Users\\SNEH\\Desktop\\AI MUSIC\\run.py', reloading
+2025-07-11 09:30:06,485 - INFO -  * Restarting with stat
+2025-07-11 09:30:06,876 - WARNING -  * Debugger is active!
+2025-07-11 09:30:06,876 - INFO -  * Debugger PIN: 133-803-107
+2025-07-11 09:30:14,068 - INFO - 127.0.0.1 - - [11/Jul/2025 09:30:14] "GET / HTTP/1.1" 200 -

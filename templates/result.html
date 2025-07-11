@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Generated</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { color: #6c5ce7; }
+        audio { margin: 20px 0; width: 100%; }
+        a { 
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #6c5ce7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎵 {{ title }} Generated!</h1>
+    <audio controls>
+        <source src="{{ url_for('static', filename=audio_file.split('/')[-1]) }}" type="audio/mpeg">
+        Your browser doesn't support audio.
+    </audio>
+    <br>
+    <a href="/">⬅️ Back to Generator</a>
+</body>
+</html>

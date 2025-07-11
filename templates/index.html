@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Music Generator</title>
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --accent: #fd79a8;
+            --success: #00b894;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            background-image: radial-gradient(circle at 10% 20%, rgba(166, 226, 229, 0.2) 0%, rgba(198, 214, 255, 0.2) 90%);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .subtitle {
+            color: var(--dark);
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .card-title i {
+            font-size: 1.8rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        input[type="text"], 
+        textarea, 
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #dfe6e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="text"]:focus, 
+        textarea:focus, 
+        select:focus,
+        input[type="file"]:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn:hover {
+            background-color: #5649d1;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #8c7ae6;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+        }
+        
+        .btn-accent:hover {
+            background-color: #e84393;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .toggle-container {
+            display: flex;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #dfe6e9;
+        }
+        
+        .toggle-option {
+            flex: 1;
+            text-align: center;
+            padding: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .toggle-option.active {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .toggle-option:not(.active):hover {
+            background-color: #f1f2f6;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .preview-section {
+            margin-top: 2rem;
+            border-top: 1px solid #dfe6e9;
+            padding-top: 1.5rem;
+        }
+        
+        .preview-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .lyrics-preview {
+            white-space: pre-line;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .genre-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .genre-option {
+            padding: 0.8rem;
+            border: 2px solid #dfe6e9;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .genre-option:hover {
+            border-color: var(--secondary);
+        }
+        
+        .genre-option.selected {
+            border-color: var(--primary);
+            background-color: rgba(108, 92, 231, 0.1);
+            font-weight: 600;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid var(--primary);
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #dfe6e9;
+            color: #636e72;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Music Generator</h1>
+            <p class="subtitle">Create unique songs with artificial intelligence</p>
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Music creation" class="hero-image">
+        </header>
+        
+        <div class="card">
+            <h2 class="card-title"><i class="fas fa-music"></i> Song Creation</h2>
+            
+            <div class="form-group">
+                <label for="song-title">Song Title</label>
+                <input type="text" id="song-title" placeholder="Enter your song title">
+            </div>
+            
+            <div class="form-group">
+                <label>Lyrics Option</label>
+                <div class="toggle-container">
+                    <div class="toggle-option active" id="option-write">Write My Own</div>
+                    <div class="toggle-option" id="option-generate">Generate Lyrics</div>
+                </div>
+            </div>
+            
+            <div id="write-lyrics-section">
+                <div class="form-group">
+                    <label for="song-lyrics">Your Lyrics</label>
+                    <textarea id="song-lyrics" placeholder="Write your song lyrics here..."></textarea>
+                </div>
+            </div>
+            
+            <div id="generate-lyrics-section" class="hidden">
+                <div class="form-group">
+                    <label for="lyrics-prompt">Describe Your Song</label>
+                    <input type="text" id="lyrics-prompt" placeholder="E.g. A love song about summer nights">
+                </div>
+                <button class="btn btn-secondary" id="generate-lyrics-btn">
+                    <i class="fas fa-magic"></i> Generate Lyrics
+                </button>
+                
+                <div class="preview-section hidden" id="generated-lyrics-preview">
+                    <h3 class="preview-title">Generated Lyrics Preview</h3>
+                    <div class="lyrics-preview" id="lyrics-preview-content"></div>
+                    <div class="btn-group">
+                        <button class="btn" id="use-lyrics-btn">
+                            <i class="fas fa-check"></i> Use These Lyrics
+                        </button>
+                        <button class="btn btn-secondary" id="regenerate-lyrics-btn">
+                            <i class="fas fa-sync-alt"></i> Try Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-title"><i class="fas fa-sliders-h"></i> Music Settings</h2>
+            
+            <div class="form-group">
+                <label>Select Genre</label>
+                <div class="genre-selector">
+                    <div class="genre-option selected" data-genre="pop">Pop</div>
+                    <div class="genre-option" data-genre="rock">Rock</div>
+                    <div class="genre-option" data-genre="hiphop">Hip Hop</div>
+                    <div class="genre-option" data-genre="electronic">Electronic</div>
+                    <div class="genre-option" data-genre="jazz">Jazz</div>
+                    <div class="genre-option" data-genre="classical">Classical</div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Voice Options</label>
+                <div class="toggle-container">
+                    <div class="toggle-option active" id="option-generate-voice">Generate Voice</div>
+                    <div class="toggle-option" id="option-upload-voice">Upload Voice Audio</div>
+                </div>
+            </div>
+            
+            <div id="upload-voice-section" class="hidden">
+                <div class="form-group">
+                    <label for="audio-file">Upload Voice Recording (WAV/MP3)</label>
+                    <input type="file" id="audio-file" accept=".wav,.mp3">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="mood">Mood</label>
+                <select id="mood">
+                    <option value="happy">Happy/Upbeat</option>
+                    <option value="sad">Sad/Melancholic</option>
+                    <option value="energetic">Energetic</option>
+                    <option value="calm">Calm/Relaxed</option>
+                    <option value="romantic">Romantic</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading-indicator">
+            <div class="spinner"></div>
+            <p>Generating your music... This may take a few minutes</p>
+        </div>
+        
+        <div class="btn-group">
+            <button class="btn btn-accent" id="preview-btn">
+                <i class="fas fa-play"></i> Preview
+            </button>
+            <button class="btn" id="generate-btn">
+                <i class="fas fa-bolt"></i> Generate Full Song
+            </button>
+        </div>
+        
+        <footer>
+            <p>© 2025 AI Music Generator | Powered by Sneh</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle between write and generate lyrics
+            const writeOption = document.getElementById('option-write');
+            const generateOption = document.getElementById('option-generate');
+            const writeSection = document.getElementById('write-lyrics-section');
+            const generateSection = document.getElementById('generate-lyrics-section');
+            
+            writeOption.addEventListener('click', function() {
+                writeOption.classList.add('active');
+                generateOption.classList.remove('active');
+                writeSection.classList.remove('hidden');
+                generateSection.classList.add('hidden');
+            });
+            
+            generateOption.addEventListener('click', function() {
+                generateOption.classList.add('active');
+                writeOption.classList.remove('active');
+                generateSection.classList.remove('hidden');
+                writeSection.classList.add('hidden');
+            });
+            
+            // Voice option toggle
+            const generateVoiceOption = document.getElementById('option-generate-voice');
+            const uploadVoiceOption = document.getElementById('option-upload-voice');
+            const uploadVoiceSection = document.getElementById('upload-voice-section');
+            
+            generateVoiceOption.addEventListener('click', function() {
+                generateVoiceOption.classList.add('active');
+                uploadVoiceOption.classList.remove('active');
+                uploadVoiceSection.classList.add('hidden');
+            });
+            
+            uploadVoiceOption.addEventListener('click', function() {
+                uploadVoiceOption.classList.add('active');
+                generateVoiceOption.classList.remove('active');
+                uploadVoiceSection.classList.remove('hidden');
+            });
+            
+            // Genre selection
+            const genreOptions = document.querySelectorAll('.genre-option');
+            genreOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    genreOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Generate lyrics button
+            const generateLyricsBtn = document.getElementById('generate-lyrics-btn');
+            const lyricsPreview = document.getElementById('generated-lyrics-preview');
+            const lyricsContent = document.getElementById('lyrics-preview-content');
+            
+            generateLyricsBtn.addEventListener('click', function() {
+                const prompt = document.getElementById('lyrics-prompt').value;
+                if (!prompt) {
+                    alert('Please describe your song first');
+                    return;
+                }
+                
+                // Show loading state
+                generateLyricsBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+                generateLyricsBtn.disabled = true;
+                
+                // Simulate API call (in a real app, this would be an actual API call)
+                setTimeout(() => {
+                    // This is mock data - replace with actual API response
+                    const mockLyrics = generateMockLyrics(prompt);
+                    lyricsContent.textContent = mockLyrics;
+                    lyricsPreview.classList.remove('hidden');
+                    
+                    // Reset button
+                    generateLyricsBtn.innerHTML = '<i class="fas fa-magic"></i> Generate Lyrics';
+                    generateLyricsBtn.disabled = false;
+                }, 2000);
+            });
+            
+            // Use lyrics button
+            document.getElementById('use-lyrics-btn').addEventListener('click', function() {
+                document.getElementById('song-lyrics').value = lyricsContent.textContent;
+                writeOption.click(); // Switch back to write view
+            });
+            
+            // Regenerate lyrics button
+            document.getElementById('regenerate-lyrics-btn').addEventListener('click', function() {
+                document.getElementById('generate-lyrics-btn').click();
+            });
+            
+            document.getElementById('generate-btn').addEventListener('click', function() {
+            const title = document.getElementById('song-title').value;
+            const lyrics = document.getElementById('song-lyrics').value;
+            const selectedGenre = document.querySelector('.genre-option.selected').dataset.genre;
+            const mood = document.getElementById('mood').value;
+            const useExistingAudio = uploadVoiceOption.classList.contains('active');
+            const audioFile = document.getElementById('audio-file').files[0];
+            
+            if (useExistingAudio && !audioFile) {
+                alert('Please upload an audio file when using existing audio');
+                return;
+            }
+            
+            if (!useExistingAudio && (!title || !lyrics)) {
+                alert('Please provide a song title and lyrics');
+                return;
+            }
+            
+            // Show loading
+            document.getElementById('loading-indicator').style.display = 'block';
+            
+            // Create form data
+            const formData = new FormData();
+            formData.append('title', title);
+            if (!useExistingAudio) formData.append('lyrics', lyrics);
+            formData.append('genre', selectedGenre);
+            formData.append('mood', mood);
+            formData.append('use_existing_audio', useExistingAudio);
+            if (useExistingAudio) formData.append('audio_file', audioFile);
+            
+            // Make API call to Flask backend
+            fetch('/generate', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.text().then(text => { throw new Error(text) });
+                }
+                return response.text();
+            })
+            .then(html => {
+                // Handle successful response
+                document.getElementById('loading-indicator').style.display = 'none';
+                document.body.innerHTML = html; // Replace page with response
+            })
+            .catch(error => {
+                document.getElementById('loading-indicator').style.display = 'none';
+                alert('Error: ' + error.message);
+                console.error('Error:', error);
+            });
+        });
+            
+            // Preview button
+            document.getElementById('preview-btn').addEventListener('click', function() {
+                alert('In a real implementation, this would play a preview of your song');
+            });
+            
+            // Helper function to generate mock lyrics
+            function generateMockLyrics(prompt) {
+                const verses = [
+                    `[Verse 1]\nThe sun goes down, the stars appear\nYour voice is all I want to hear\nIn this moment, time stands still\nWith you I find my perfect thrill`,
+                    
+                    `[Verse 2]\nWalking through the city lights\nHand in hand on summer nights\nEvery touch feels like a spark\nLighting up the endless dark`,
+                    
+                    `[Chorus]\nOh-oh-oh, you're my melody\nOh-oh-oh, sweet harmony\nIn your arms I've found my home\nNever want to be alone`
+                ];
+                
+                return verses.join('\n\n') + `\n\n[Bridge]\n${prompt}\nThis is where our story grows\nLike a river, freely flows\n\n[Outro]\nFading slowly, end of day\nBut our love won't fade away`;
+            }
+        });
+    </script>
+</body>
+</html>
