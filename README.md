@@ -15,30 +15,6 @@ This is a **Flask-based AI music generation system** that creates **vocals from 
 
 ---
 
-## 🗂️ Project Structure
-
-music_production_app/
-├── app.py # Main Flask app
-├── templates/ # HTML templates
-│ ├── index.html
-│ └── result.html
-├── static/ # Final output location
-│ └── final_song.mp3
-├── output/ # Intermediate audio files
-├── logs/ # Logging outputs
-├── tune_music.py # Mixer script
-├── sound/ # MusicGen environment
-│ ├── main.py
-│ └── audiocraft_env/ # venv for MusicGen
-├── Tortoise/ # Voice generation environment
-│ ├── lyrics.py
-│ └── musicenv/ # venv for Tortoise
-├── .gitignore
-└── README.md
-
-
----
-
 ## 🛠️ Setup Instructions
 
 ### 1. Clone the Repository
