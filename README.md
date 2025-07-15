@@ -1,3 +1,4 @@
+
 # 🎶 AI Music Production App
 
 This is a **Flask-based AI music generation system** that creates **vocals from lyrics**, generates **background music**, and blends both into a **final MP3** using a custom audio tuning script.
@@ -48,33 +49,21 @@ cd music_production_app
 🐢 Tortoise (for voice generation)
 cd Tortoise
 python -m venv musicenv
-# Activate:
-# Windows: musicenv\Scripts\activate
-# Linux/macOS: source musicenv/bin/activate
-
 Install dependencies:
 pip install torch==2.0.1
 pip install transformers==4.35.0
 pip install tokenizers==0.14.0
-
-# Clone Tortoise repo (custom)
 git clone https://github.com/neonbjb/tortoise-tts.git
 cd tortoise-tts
-# ⚠️ Remove or comment out this line in setup.cfg before installing:
-# torchaudio==2.0.2
 python setup.py install
 
 🎵 Audiocraft (for music generation)
 cd ../../sound
 python -m venv audiocraft_env
-# Activate:
-# Windows: audiocraft_env\Scripts\activate
-# Linux/macOS: source audiocraft_env/bin/activate
-
 Install dependencies:
 pip install torch==2.1.0
 pip install "transformers>=4.31.0"
-# Plus any additional requirements for MusicGen
+Plus any additional requirements for MusicGen
 3. Run the Flask App
 Back to root:
 cd ..
@@ -100,12 +89,9 @@ Separate virtual environments:
 Tortoise: torch==2.0.1, transformers==4.35.0, tokenizers==0.14.0
 MusicGen: torch==2.1.0, transformers>=4.31.0
 
-📁 .gitignore
-# Python cache
+📁 .gitignore\
 __pycache__/
 *.py[cod]
-
-# Virtual environments
 sound/audiocraft_env/
 Tortoise/musicenv/
 
@@ -115,10 +101,10 @@ output/
 static/final_song.mp3
 
 
-## 🌟 Sample outputs
+### 🌟 Sample outputs
 [🔊 Listen](output/best_final_mix.wav) 
 
-## 🖼️ UI Screenshot
+### 🖼️ UI Screenshot
 ![Alt Text](output/image.png)
 
 
@@ -134,3 +120,4 @@ Let me know if you’d like:
 Separate requirements.txt for each env
 Dockerfile for deployment
 Sample data/test mode
+AI-Music-Generator/ at main · Shark-Bot-X/AI-Music-Generator
