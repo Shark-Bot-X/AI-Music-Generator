@@ -1,0 +1,20 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+sound/audiocraft_env/
+Tortoise/musicenv/
+
+# Ignore runtime outputs and logs
+output/
+logs/
+static/final_song.mp3
+
+# Ignore uploads (if added)
+*.wav
+*.mp3
+
+# VSCode or PyCharm files (optional)
+.vscode/
+.idea/
