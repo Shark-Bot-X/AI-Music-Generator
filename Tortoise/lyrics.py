@@ -32,7 +32,7 @@ VOICE_MAP = {
 }
 
 USE_GEMINI = True
-GEMINI_API_KEY = "AIzaSyCZWwW3SW3J940x5GOR4CP0goM6_9ZLRVI"
+GEMINI_API_KEY = ""
 OUTPUT_VOICE = "output/voice.wav"
 
 # --- Setup Gemini ---
